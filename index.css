@@ -49,10 +49,13 @@ h1 {
     padding: 0px 16px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
 }
 
 #main-view {
-    width: 750px;
+    max-width: 750px;
     position: relative;
 }
 
@@ -76,6 +79,7 @@ h1 {
     line-height: 26px;
     margin: 0;
 }
+
 .article-caption-link:hover {
     text-decoration: underline;
 }
@@ -88,7 +92,6 @@ h1 {
 }
 
 #items-view {
-    margin: 0 0 0 30px;
     flex: 1;
 }
 
@@ -100,38 +103,33 @@ h2 {
 }
 
 #view-list {
-    list-style: none;
     padding: 0;
     margin: 0;
+    width: 360px;
 }
 
-.view-item {
-    width: 358px;
-    margin: 0 0 23px 0;
-    border: solid 1px;
-    border-radius: 3px;
-    height: 70px; 
-}
-
-.item-util{
-    display: flex;
+.view-item{
     align-items: center;
     color: inherit;
     text-decoration: none;
+    margin: 0 0 23px 0;
+    border: solid 1px black;
+    border-radius: 3px;
+    height: 70px; 
+    display: flex;
 }
 
-.item-util:hover {
+.view-item:hover {
     text-decoration: underline;
 }
 
 .item-title{
     padding: 0 16px;
     margin: 0;
-    width: 206px;
+    flex: 1;
     font-size: 16px;
     font-weight: 400;
     line-height: 27px;
-    overflow: hidden;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -144,7 +142,7 @@ h2 {
 
 @media only screen and (max-width: 1024px) {
     #show-view {
-        display: block;
+        flex-direction: column;
     }
     
     #main-view {
@@ -152,6 +150,9 @@ h2 {
     }
     
     #items-view {
-        width: 100%;
+        width: 50%;
     }
+  }
+
+@media only screen and (max-width: 767px) {
   }
