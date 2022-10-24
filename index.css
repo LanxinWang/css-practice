@@ -15,10 +15,6 @@ body {
     max-width: calc(1140px + var(--padding) * 2);
     margin: var(--margin) auto 0;
     padding: 0 var(--padding);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 header {
@@ -46,9 +42,6 @@ h1 {
     margin: 0;
     padding: 0px 16px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     gap: 30px;
 }
 
@@ -100,11 +93,6 @@ h2 {
     font-weight: 500;
 }
 
-#view-list {
-    padding: 0;
-    margin: 0;
-}
-
 .view-item{
     max-width: 360px;
     align-items: center;
@@ -153,21 +141,30 @@ h2 {
     }
     
     #items-view {
-        width: 100%;
+        max-width: 1023px;
+        padding: 0 16px;
     }
 
     #view-list {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 49% 49%;
         gap: 16px 24px;
     }
 
     .view-item {
-        max-width: 480px;
+        max-width: 100%;
         margin: 0;
     }
     
   }
 
 @media only screen and (max-width: 767px) {
+    #view-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .view-item {
+        max-width: 100%;
+    }
   }
