@@ -1,0 +1,37 @@
+body {
+    width: 100%;
+    height: auto;
+    font-family: "Kanit", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+#show-view {
+    margin: 0;
+    padding: 0px 16px;
+    display: flex;
+    flex-direction: row;
+}
+
+#main-view {
+    width: 750px;
+}
+
+#main-view-abstract {
+}
+
+#items-view {
+    flex: 1;
+}
+
+@media only screen and (max-width: 1024px) {
+    #show-view {
+        display: block;
+    }
+    
+    #main-view {
+        width: 100%;
+    }
+    
+    #items-view {
+        width: 100%;
+    }
+  }
