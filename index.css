@@ -1,5 +1,4 @@
 body {
-    width: 100%;
     height: auto;
     font-family: "Kanit", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     margin: 0;
@@ -13,7 +12,6 @@ body {
 #view-app{
     --margin: 0px;
     --padding: 16px;
-    width: 100%;
     max-width: calc(1140px + var(--padding) * 2);
     margin: var(--margin) auto 0;
     padding: 0 var(--padding);
@@ -55,7 +53,7 @@ h1 {
 }
 
 #main-view {
-    max-width: 750px;
+    min-width: 750px;
     position: relative;
 }
 
@@ -105,10 +103,10 @@ h2 {
 #view-list {
     padding: 0;
     margin: 0;
-    width: 360px;
 }
 
 .view-item{
+    max-width: 360px;
     align-items: center;
     color: inherit;
     text-decoration: none;
@@ -141,17 +139,34 @@ h2 {
 }
 
 @media only screen and (max-width: 1024px) {
-    #show-view {
-        flex-direction: column;
+    img {
+        width: 100%;
     }
-    
+    #show-view {
+        width: 100%;
+        flex-direction: column;
+        padding: 0;
+    }
+
     #main-view {
         width: 100%;
     }
     
     #items-view {
-        width: 50%;
+        width: 100%;
     }
+
+    #view-list {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 16px 24px;
+    }
+
+    .view-item {
+        max-width: 480px;
+        margin: 0;
+    }
+    
   }
 
 @media only screen and (max-width: 767px) {
