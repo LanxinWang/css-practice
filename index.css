@@ -2,6 +2,40 @@ body {
     width: 100%;
     height: auto;
     font-family: "Kanit", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#view-app{
+    width: 65%;
+    padding: 0px 16px;
+    margin: 0;
+}
+
+header {
+    margin: 0px;
+    padding: 32px 24px 24px 24px;
+    color: rgb(51, 63, 72);
+}
+
+h1 {
+    margin: 0px;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 46px;
+    text-align: center;
+}
+
+#abstract {
+    margin: 16px 0 0 0;
+    color: rgb(51, 63, 72);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: center;
 }
 
 #show-view {
@@ -13,9 +47,6 @@ body {
 
 #main-view {
     width: 750px;
-}
-
-#main-view-abstract {
 }
 
 #items-view {
